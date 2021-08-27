@@ -1,0 +1,45 @@
+@mixin abcenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+
+@mixin clearfix {
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin res($device) {
+    @if $device==phone {
+        @media only screen and (max-width: 37.5em) {
+            @content
+        }
+        ; //600px
+    }
+    @if $device==tab-port {
+        @media only screen and (max-width: 50em) {
+            @content
+        }
+        ; //900px
+    }
+    @if $device==tab-land {
+        @media only screen and (max-width: 75em) {
+            @content
+        }
+        ; //1200px
+    }
+    @if $device==big {
+        @media only screen and (min-width: 117.5) {
+            @content
+        }
+        ; //1800px
+    }
+}

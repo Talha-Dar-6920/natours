@@ -1,0 +1,72 @@
+.heading-primary {
+    color: $color-white;
+    text-transform: uppercase;
+    &--main {
+        font-size: 7rem;
+        letter-spacing: 2rem;
+        font-weight: 500;
+        display: inline-block;
+        transition: all 0.2s ease;
+        animation: fromleft 1s ease;
+        -webkit-animation: fromleft 1s ease;
+        -webkit-transition: all 0.2s ease;
+        -moz-transition: all 0.2s ease;
+        -ms-transition: all 0.2s ease;
+        -o-transition: all 0.2s ease;
+        @include res(phone) {
+            font-size: 5rem;
+        }
+    }
+    &--sub {
+        font-size: 2rem;
+        letter-spacing: 1rem;
+        font-weight: 700;
+        display: inline-block;
+        margin-bottom: 4rem;
+        animation: fromright 1s ease;
+        -webkit-animation: fromright 1s ease;
+        transition: all 0.2s ease;
+        -webkit-transition: all 0.2s ease;
+        -moz-transition: all 0.2s ease;
+        -ms-transition: all 0.2s ease;
+        -o-transition: all 0.2s ease;
+        @include res(phone) {
+            font-size: 1.5rem;
+            letter-spacing: 0.6rem;
+        }
+    }
+}
+
+.heading-secendary {
+    text-transform: uppercase;
+    background-image: linear-gradient( to right, rgba($color-11, 0.8), rgba($color-12, 0.8));
+    -webkit-background-clip: text;
+    -o-background-clip: text;
+    -moz-background-clip: text;
+    display: inline-block;
+    color: transparent;
+    cursor: pointer;
+    text-shadow: 0.5rem 0.5rem 1rem rgba($color-black, 0.2);
+    font-size: 3rem;
+    &:hover {
+        transform: scale(1.2) skewX(7deg) skewY(5deg);
+    }
+    @include res(phone) {
+        font-size: 2.5rem;
+        padding: 0 2.5rem;
+        &:hover {
+            transform: scale(1.05) skewX(4deg) skewY(3deg);
+        }
+    }
+}
+
+.heading-tertiary {
+    text-transform: uppercase;
+    background-image: linear-gradient( to right, rgba($color-11, 0.8), rgba($color-12, 0.8));
+    -webkit-background-clip: text;
+    -o-background-clip: text;
+    -moz-background-clip: text;
+    display: inline-block;
+    color: transparent;
+    font-size: 2rem;
+}
